@@ -132,32 +132,25 @@ body {
     right: 20px;
   }
 
-  .fixed img,
-  .fixed2 img {
-    width: 36px !important;
-    height: 36px !important;
-  }
-
-  .fixed {
-    bottom: 60px;
-  }
-
-  .fixed2 {
-    bottom: 15px;
-  }
-}
-
-/* 작은 모바일 */
-@media (max-width: 480px) {
+/* 모바일 반응형 */
+@media (max-width: 768px) {
 
   .fixed,
   .fixed2 {
-    right: 15px;
+    right: 20px;
   }
 
   .fixed img,
   .fixed2 img {
-    width: 24px !important;
-    height: 24px !important;
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .fixed {
+    bottom: 92px;
+  }
+
+  .fixed2 {
+    bottom: 40px;
   }
 }
