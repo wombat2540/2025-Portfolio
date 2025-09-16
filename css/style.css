@@ -206,6 +206,10 @@ img {
     margin-bottom: 4px;
 }
 
+.slogan .profile-title span{
+    font-weight: 300;
+}
+
 .profile,
 .education,
 .experience,
@@ -516,4 +520,5 @@ img {
         /* overflow: auto; */
         overflow-y: visible;
     }
+
 }
