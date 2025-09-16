@@ -32,8 +32,8 @@ body {
 /* 고정 버튼 스타일 */
 .fixed {
   position: fixed;
-  right: 30px;
-  bottom: 90px;
+  right: 20px;
+  bottom: 152px;
   z-index: 1000;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 50%;
@@ -42,10 +42,12 @@ body {
 }
 
 .fixed img {
-  width: 56px;
-  height: 56px;
-  max-width: none !important;
-  max-height: none !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important; /* 최소 크기 고정 */
+  min-height: 44px !important;
+  max-width: 44px !important;
+  max-height: 44px !important;
   display: block;
   transition: transform 0.3s ease;
   border-radius: 99px;
@@ -63,8 +65,8 @@ body {
 
 .fixed2 {
   position: fixed;
-  right: 30px;
-  bottom: 20px;
+  right: 20px;
+  bottom: 100px;
   z-index: 1000;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 50%;
@@ -73,10 +75,12 @@ body {
 }
 
 .fixed2 img {
-  width: 56px;
-  height: 56px;
-  max-width: none !important;
-  max-height: none !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important; /* 최소 크기 고정 */
+  min-height: 44px !important;
+  max-width: 44px !important;
+  max-height: 44px !important;
   display: block;
   transition: transform 0.3s ease;
   border-radius: 99px;
@@ -91,77 +95,3 @@ body {
 .fixed2:hover img {
   transform: scale(1.1);
 }
-
-.landing{
-  position: relative;
-}
-
-.landing a {
-  display: block;
-  position: absolute;
-  top: 224px;
-  left: 561px;
-  width: 80px;
-  height: 50px;
-}
-
-/* 태블릿 반응형 */
-@media (max-width: 1024px) {
-
-  .fixed,
-  .fixed2 {
-    right: 25px;
-  }
-
-  .fixed img,
-  .fixed2 img {
-    width: 48px !important;
-    height: 48px !important;
-  }
-
-  .fixed {
-    bottom: 80px;
-  }
-}
-
-/* 모바일 반응형 */
-@media (max-width: 768px) {
-
-  .fixed,
-  .fixed2 {
-    right: 20px;
-  }
-
-  .fixed img,
-  .fixed2 img {
-    width: 44px !important;
-    height: 44px !important;
-  }
-
-  .fixed {
-    bottom: 92px;
-  }
-
-  .fixed2 {
-    bottom: 40px;
-  }
-}
-
-/* 작은 모바일 */
-@media (max-width: 480px) {
-
-.fixed {
-    bottom: 152px;
-  }
-
-.fixed {
-    bottom: 100px;
-  }
-
-  .fixed img,
-  .fixed2 img {
-    width: 44px !important;
-    height: 44px !important;
-  }
-}
-
