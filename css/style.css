@@ -1,0 +1,519 @@
+/* 기본 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Pretendard', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    background-color: #1a1a1a;
+    color: #fff;
+    overflow: hidden;
+    /* 전체 페이지 스크롤 방지 */
+}
+
+/* 폰트 스타일 */
+.profile-title {
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 34px;
+    margin: 0;
+}
+
+.contents-title {
+    font-weight: 200;
+    font-size: 28px;
+    line-height: 40px;
+}
+
+.small-title {
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.body {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.date {
+    font-weight: 200;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.site-btn {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* 컬러 스타일 */
+.grey {
+    color: #999;
+}
+
+.white {
+    color: #fff;
+}
+
+.brand {
+    color: #E86E17;
+}
+
+/* 메인 레이아웃 */
+.main-site-warp {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+
+/* Preloder */
+
+#preloder {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999999;
+	background: #000;
+}
+
+.loader {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -13px;
+	margin-left: -13px;
+	border-radius: 60px;
+	animation: loader 0.8s linear infinite;
+	-webkit-animation: loader 0.8s linear infinite;
+}
+
+@keyframes loader {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		border: 4px solid #E86E17;
+		border-left-color: transparent;
+	}
+
+	50% {
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg);
+		border: 4px solid #a14c0f;
+		border-left-color: transparent;
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+		border: 4px solid #472208;
+		border-left-color: transparent;
+	}
+}
+
+@-webkit-keyframes loader {
+	0% {
+		-webkit-transform: rotate(0deg);
+		border: 4px solid #E86E17;
+		border-left-color: transparent;
+	}
+
+	50% {
+		-webkit-transform: rotate(180deg);
+		border: 4px solid #a14c0f;
+		border-left-color: transparent;
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+		border: 4px solid #472208;
+		border-left-color: transparent;
+	}
+}
+
+/* 헤더 섹션 */
+.header-section {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    padding: 20px 40px;
+    z-index: 999;
+    background: rgba(26, 26, 26, 0.2);
+    height: 72px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px)
+}
+
+/* 사이트 콘텐츠 래퍼 */
+.site-content-warp {
+    position: relative;
+    height: 100%;
+    padding-top: 72px;
+    padding-left: 450px;
+}
+
+/* 메인 사이드바 */
+.main-sidebar {
+    position: absolute;
+    width: 450px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+
+.main-sidebar .mb-warp {
+    padding: 120px 40px;
+    height: calc(100% - 72px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* 증명사진 규격 */
+.profile-img img {
+    width: 150px;
+    height: 200px;
+}
+
+.slogan {
+    margin: 20px 0 48px;
+}
+
+.slogan .small-title {
+    margin-bottom: 4px;
+}
+
+.profile,
+.education,
+.experience,
+.awards,
+.skill {
+    display: flex;
+    margin-bottom: 52px;
+}
+
+.profile .small-title,
+.education .small-title,
+.experience .small-title,
+.awards .small-title,
+.skill .small-title {
+    width: 100px;
+    flex-shrink: 0;
+}
+
+.profile ul li,
+.education ul li p,
+.experience ul li p,
+.awards ul li p {
+    margin-bottom: 4px;
+}
+
+.experience ul li,
+.awards ul li {
+    margin-bottom: 16px;
+}
+
+.skill ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 240px;
+    gap: 12px;
+}
+
+/* 카피라이트 */
+.copyright {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 450px;
+    padding: 20px 40px;
+
+    /* 글래스모피즘 효과 */
+    background: rgba(26, 26, 26, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+
+    font-size: 11px;
+    line-height: 16px;
+    color: #999;
+    z-index: 998;
+}
+
+.copyright p {
+    margin: 2px 0;
+}
+
+/* 페이지 섹션 - 현재 콘텐츠 영역 적용 */
+.page-section {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* 포트폴리오 블로그 페이지 */
+.blog-page {
+    width: 100%;
+    padding: 0 40px;
+}
+
+.blog-title {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.blog-posts {
+    column-count: 2;
+    /* 2열 */
+    column-gap: 20px;
+    /* 열 사이 간격 */
+    width: 100%;
+    padding-bottom: 60px;
+}
+
+.blog-post-item {
+    display: inline-block;
+    /* column 내부에서 블록처럼 배치 */
+    width: 100%;
+    /* column 너비 꽉 채우기 */
+    margin: 0 0 20px;
+    /* 아래 간격 */
+    background: rgba(255, 255, 255, 0.02);
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.blog-thumb {
+    width: 100%;
+    aspect-ratio: 538 / 379;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.blog-thumb img {
+    display: block;
+    border-radius: 4px;
+}
+
+.blog-post-item .numbering {
+    margin-bottom: 4px;
+}
+
+.blog-post-item .contents-title {
+    margin-bottom: 20px;
+}
+
+.blog-info-wrap .blog-info {
+    margin-top: 4px;
+}
+
+.blog-info-wrap .blog-info .info-type {
+    display: flex;
+}
+
+.blog-info .info-type :nth-child(1) {
+    width: 100px;
+}
+
+.blog-metas {
+    margin-top: 24px;
+}
+
+.blog-metas .blog-meta {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.blog-metas .blog-meta a {
+    display: block;
+    padding: 10px 0;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid rgba(232, 110, 23, 0.3);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.blog-metas .blog-meta a:hover {
+    background: linear-gradient(130deg, rgba(232, 110, 23, 0.8) 0%, rgba(87, 43, 12, 1) 100%);
+    border-color: rgba(232, 110, 23, 0.8);
+}
+
+/* 스크롤바 스타일링 */
+.main-sidebar .mb-warp::-webkit-scrollbar,
+.page-section::-webkit-scrollbar {
+    width: 6px;
+}
+
+.main-sidebar .mb-warp::-webkit-scrollbar-track,
+.page-section::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.main-sidebar .mb-warp::-webkit-scrollbar-thumb,
+.page-section::-webkit-scrollbar-thumb {
+    background: rgba(232, 110, 23, 0.6);
+    border-radius: 3px;
+}
+
+.main-sidebar .mb-warp::-webkit-scrollbar-thumb:hover,
+.page-section::-webkit-scrollbar-thumb:hover {
+    background: rgba(232, 110, 23, 0.8);
+}
+
+/* 768px~1079px 구간 - 콘텐츠 1개씩 화면 꽉 채우기 */
+@media only screen and (min-width: 768px) and (max-width: 1079px) {
+    .blog-post-item {
+        width: 100%;
+        /* 1개씩 전체 너비 사용 */
+        max-width: none;
+        margin-bottom: 30px;
+        /* 카드 간 세로 간격 */
+    }
+
+    .blog-posts {
+        column-count: 1;
+        column-gap: 16px;
+    }
+
+    .blog-page {
+        padding: 0 30px;
+        /* 좌우 패딩 줄임 */
+    }
+
+    .site-content-warp {
+        padding-left: 400px;
+        /* 사이드바 너비에 맞춰 조정 */
+    }
+
+    .main-sidebar {
+        width: 400px;
+        /* 사이드바 너비 더 줄임 */
+    }
+
+    .copyright {
+        width: 400px;
+        /* 카피라이트도 함께 조정 */
+    }
+}
+
+/* 반응형 - 767px 이하만 모바일 레이아웃 */
+@media only screen and (max-width: 767px) {
+    .header-section {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: auto;
+        z-index: 999;
+        background: rgba(26, 26, 26, 0.4);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+
+    .site-content-warp {
+        padding-left: 0;
+        padding-top: 72px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-sidebar .mb-warp {
+        overflow-y: visible;
+        height: auto;
+        margin-top: 0;
+        padding: 40px 30px 40px;
+        /* 하단 패딩 조정 */
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .page-section {
+        overflow-y: visible;
+    }
+
+    .blog-page {
+        padding: 0 20px;
+        /* 좌우 패딩 */
+    }
+
+    .blog-post-item {
+        width: 100%;
+        /* 전체 너비 사용 */
+        max-width: none;
+        /* 최대 너비 제한 제거 */
+        margin: 0 0 20px 0;
+        /* 좌우 마진 제거 */
+    }
+
+    .blog-posts {
+        column-count: 1;
+        column-gap: 0;
+    }
+
+    /* 사이드바 안의 카피라이트 숨김 */
+    .main-sidebar .copyright {
+        display: none;
+    }
+
+    /* 카피라이트를 site-content-warp 다음에 배치 */
+    .site-content-warp::after {
+        content: "Jeong Je yong All rights reserved.\A본 사이트는 비상업적, 개인 포트폴리오 용도로 제작되었습니다.";
+        display: block;
+        padding: 40px 15px;
+        text-align: center;
+        width: 100%;
+        background: rgba(26, 26, 26, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        font-size: 11px;
+        color: #999;
+        white-space: pre;
+        line-height: 1.4;
+        margin-top: auto;
+    }
+
+    body {
+        /* overflow: auto; */
+        overflow-y: visible;
+    }
+}
