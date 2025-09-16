@@ -120,30 +120,15 @@ body {
 
   .fixed img,
   .fixed2 img {
-    width: 36px !important;
-    height: 36px !important;
+    width: 44px !important;
+    height: 44px !important;
   }
 
   .fixed {
-    bottom: 60px;
+    bottom: 92px;
   }
 
   .fixed2 {
-    bottom: 15px;
-  }
-}
-
-/* 작은 모바일 */
-@media (max-width: 480px) {
-
-  .fixed,
-  .fixed2 {
-    right: 15px;
-  }
-
-  .fixed img,
-  .fixed2 img {
-    width: 24px !important;
-    height: 24px !important;
+    bottom: 40px;
   }
 }
