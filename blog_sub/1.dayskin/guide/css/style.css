@@ -146,3 +146,22 @@ body {
     bottom: 40px;
   }
 }
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+
+.fixed {
+    bottom: 152px;
+  }
+
+.fixed {
+    bottom: 100px;
+  }
+
+  .fixed img,
+  .fixed2 img {
+    width: 44px !important;
+    height: 44px !important;
+  }
+}
+
